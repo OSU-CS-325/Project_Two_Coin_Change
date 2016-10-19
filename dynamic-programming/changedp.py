@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+def changedp(coinArray, change):
+    #REPLACE WITH ALGORITHM
+    coinCount = [1, 1, 1, 1]
+    totalCoins = sum(coinCount)
+
+
 def make_change(coin_val_list, change, known_results):
   min_coins = change
   if change in coin_val_list:
