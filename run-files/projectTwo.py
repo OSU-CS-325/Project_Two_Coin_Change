@@ -1,12 +1,12 @@
 '''
-Program:				projectTwo.py
-Authors:				Kyle Guthrie, Alex Miranda, Cash Stramel
-Class/Section:			CS325-400
-Due Date:				October 2016
-Program Description:	Given a problem set, this program generates solutions
-						from three different "coin change" algorithms. Coded in 
-						Python and designed to run on Oregon State University's 
-						'flip' servers.
+Program:                projectTwo.py
+Authors:                Kyle Guthrie, Alex Miranda, Cash Stramel
+Class/Section:          CS325-400
+Due Date:               October 2016
+Program Description:    Given a problem set, this program generates solutions
+                        from three different "coin change" algorithms. Coded in 
+                        Python and designed to run on Oregon State University's 
+                        'flip' servers.
 '''
 import sys
 import os
@@ -33,10 +33,10 @@ outputFileName = inputFileBase + "change.txt"
 Parse the input file
 
 Expected input structure:
-	- First line contains an array of coin denominations in increasing order
-	- Second line contains one integer value for which we must make change
-	
-	Each pair of lines represents one problem
+    - First line contains an array of coin denominations in increasing order
+    - Second line contains one integer value for which we must make change
+
+    Each pair of lines represents one problem
 '''
 coinArray = []
 change = []

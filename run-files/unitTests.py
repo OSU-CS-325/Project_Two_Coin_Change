@@ -1,10 +1,10 @@
 '''
-Program:				unitTests.py
-Authors:				Kyle Guthrie, Alex Miranda, Cash Stramel
-Class/Section:			CS325-400
-Due Date:				October 2016
-Program Description:	Unit tests for the three change making algorithms 
-						implemented for Project 2.
+Program:                unitTests.py
+Authors:                Kyle Guthrie, Alex Miranda, Cash Stramel
+Class/Section:          CS325-400
+Due Date:               October 2016
+Program Description:    Unit tests for the three change making algorithms 
+                        implemented for Project 2.
 '''
 import sys
 import os
