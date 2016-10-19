@@ -19,6 +19,8 @@ from changeslow import changeslow
 from changegreedy import changegreedy
 from changedp import changedp
 
+
+### TEST CASES FOR THE 'changeslow' ALGORITHM ###
 class TestChangeSlow(unittest.TestCase):
 	def test_trivial(self):
 		coinCount, totalCoins = changeslow([1], 1)
@@ -45,6 +47,7 @@ class TestChangeSlow(unittest.TestCase):
 		self.assertEqual(coinCount, [0, 0, 1, 2])
 		self.assertEqual(totalCoins, 3)
 
+### TEST CASES FOR THE 'changegreedy' ALGORITHM ###
 class TestChangeGreedy(unittest.TestCase):
 	def test_trivial(self):
 		coinCount, totalCoins = changegreedy([1], 1)
@@ -63,14 +66,15 @@ class TestChangeGreedy(unittest.TestCase):
 
 	def test_suboptimal(self):
 		coinCount, totalCoins = changegreedy([1, 3, 7, 12], 29)
-		self.assertEqual(coinCount, [0, 1, 2, 1])
-		self.assertEqual(totalCoins, 4)
+		self.assertEqual(coinCount, [2, 1, 0, 2])
+		self.assertEqual(totalCoins, 5)
 
 	def test_optimal(self):
 		coinCount, totalCoins = changegreedy([1, 3, 7, 12], 31)
 		self.assertEqual(coinCount, [0, 0, 1, 2])
 		self.assertEqual(totalCoins, 3)
 
+### TEST CASES FOR THE 'changedp' ALGORITHM ###
 class TestChangeDP(unittest.TestCase):
 	def test_trivial(self):
 		coinCount, totalCoins = changedp([1], 1)
