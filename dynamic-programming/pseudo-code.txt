@@ -1,1 +1,41 @@
-DYNAMIC_PROG
+CHANGEDP(coin_array, change) {
+    min_coins_used = [0,...,(change + 1)]
+    min_coins_count = [0,...,(change + 1)]
+
+    for coin in range(0,...,(change + 1)) {
+        coin_count = coin
+        latest_coin = 1
+
+        for i in [coin_val in coin_array where coin_val <= coin]{
+            if min_coins_count[coin - i] + 1 < coin_count {
+                coin_count = min_coins_count[coin - i] + 1
+                latest_coin = i
+            }
+        }
+        min_coins_count[coin] = coin_count
+        min_coins_used[coin] = latest_coin
+    }
+
+    min_count = min_coins_count[change]
+    min_used = []
+
+    for k in coin_array {
+        min_used.append(0)
+    }
+
+    change_iter = change
+
+    while change_iter > 0 {
+        coin_val = min_coins_used[change_iter]
+        p = 0
+        for j in coin_array {
+            if coin_val == j {
+                min_used[p] += 1
+            }
+            p += 1
+        }
+        change_iter = change_iter - coin_val
+    }
+
+    return min_used, min_count
+}
