@@ -29,6 +29,7 @@ def changedp(coinArray, change):
 
     change_iter = change_iter - coin
 
-  return min_count, min_used
+  return min_used, min_count
 
-print(changedp([1, 3, 4], 11))
+# print(changedp([1, 5, 10, 25], 75))
+# print(changedp([1, 3, 4], 11))
