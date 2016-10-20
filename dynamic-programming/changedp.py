@@ -32,7 +32,3 @@ def changedp(coinArray, change):
   return min_count, min_used
 
 print(changedp([1, 3, 4], 11))
-print(make_change([1, 10, 25, 50], 40, [0]*64))
-print(make_change([1, 5, 10, 25, 50], 75, [0]*100))
-print(make_change([1, 10, 21, 50], 63, [0]*100))
-print(make_change([1, 2, 4, 8, 16], 120, [0]*150))
