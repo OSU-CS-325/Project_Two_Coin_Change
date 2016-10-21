@@ -12,13 +12,13 @@ def changegreedy(coinArray, change):
 	i = len(coinArray) - 1
 	while (change > 0):
 
-
-		while (change >= coinArray[i]):
+		if (change >= coinArray[i]):
 			change -= coinArray[i]
 			coinCount[i] += 1
 			if (debug):
 				print "change: ", change
 				print "coinCount: ", coinCount, "\n"
-		i -= 1 
+                else:
+			i -= 1 
 	
 	return coinCount, sum(coinCount)
