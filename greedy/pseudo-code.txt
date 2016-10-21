@@ -1,1 +1,13 @@
-GREEDY
+GREEDY(coin_array, change) {
+	coin_count = [0,...,coin_array.length - 1] = 0 
+
+	i = coin_count.length - 1
+
+	while change > 0
+		if change >= coin_array[i]
+			change -= coin_array[i]
+			coin_count[i]++
+		else
+			i--
+		
+	return coin_count, sum(coin_count[0,...,coin_count.length]) 
