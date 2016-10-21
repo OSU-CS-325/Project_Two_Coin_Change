@@ -1,6 +1,24 @@
 def changegreedy(coinArray, change):
-	# REPLACE WITH ALGORITHM
-	coinCount = [1, 1, 1, 1]
-	totalCoins = sum(coinCount) 
+
+	debug = False
+
+	coinCount = [0 for x in range(len(coinArray))]
+    
+	if (debug):
+		print "coinArray: ", coinArray
+		print "change: ", change
+		print "coinCount: ", coinCount, "\n"
+
+	i = len(coinArray) - 1
+	while (change > 0):
+
+
+		while (change >= coinArray[i]):
+			change -= coinArray[i]
+			coinCount[i] += 1
+			if (debug):
+				print "change: ", change
+				print "coinCount: ", coinCount, "\n"
+		i -= 1 
 	
-	return coinCount, totalCoins
+	return coinCount, sum(coinCount)
