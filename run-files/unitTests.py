@@ -21,6 +21,7 @@ from changedp import changedp
 
 
 ### TEST CASES FOR THE 'changeslow' ALGORITHM ###
+'''
 class TestChangeSlow(unittest.TestCase):
 	def test_trivial(self):
 		coinCount, totalCoins = changeslow([1], 0)
@@ -46,6 +47,7 @@ class TestChangeSlow(unittest.TestCase):
 		coinCount, totalCoins = changeslow([1, 3, 7, 12], 31)
 		self.assertEqual(coinCount, [0, 0, 1, 2])
 		self.assertEqual(totalCoins, 3)
+'''
 
 ### TEST CASES FOR THE 'changegreedy' ALGORITHM ###
 class TestChangeGreedy(unittest.TestCase):
