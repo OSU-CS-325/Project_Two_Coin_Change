@@ -64,3 +64,23 @@ plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
 plt.grid(True)
 plt.savefig('Q4b.png', bbox_inches='tight')
+
+### QUESTION 5 ###
+coinArray = [1] + range(2, 31, 2)
+change = range(2000, 2201)
+
+numCoinsGreedy = [0] * len(change)
+numCoinsDP = [0] * len(change)
+
+for i, amt in enumerate(change):
+	_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
+	_, numCoinsDP[i] = changedp(coinArray, amt)
+
+plt.figure(4)
+plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0, label='Greedy')
+plt.plot(change, numCoinsDP, 'r--', linewidth=2.0, label='DP')
+plt.legend(loc='upper left')
+plt.ylabel('# of Coins')
+plt.xlabel('Change Amount')
+plt.grid(True)
+plt.savefig('Q5.png', bbox_inches='tight')
