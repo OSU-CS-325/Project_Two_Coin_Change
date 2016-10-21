@@ -21,8 +21,10 @@ for i, amt in enumerate(change):
 	_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
 	_, numCoinsDP[i] = changedp(coinArray, amt)
 
-plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0)
-plt.plot(change, numCoinsDP, 'r-', linewidth=2.0)
+plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0, label='Greedy')
+plt.plot(change, numCoinsDP, 'r--', linewidth=2.0, label='DP')
+plt.legend(loc='upper left')
 plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
-plt.show()
+plt.grid(True)
+plt.savefig('Q3.png', bbox_inches='tight')
