@@ -1,4 +1,4 @@
-GREEDY(coin_array, change) {
+GREEDY(coin_array, change)
 	coin_count = [0,...,coin_array.length - 1] = 0 
 
 	i = coin_count.length - 1
