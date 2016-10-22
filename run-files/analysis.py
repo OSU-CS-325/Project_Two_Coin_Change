@@ -28,8 +28,30 @@ plt.legend(loc='upper left')
 plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
 plt.grid(True)
-plt.savefig('Q3.png', bbox_inches='tight')
+plt.savefig('img/Q3.png', bbox_inches='tight')
 
+### QUESTION 3 WITH SLOW ###
+coinArray = [1, 5, 10, 25, 50]
+change = range(1, 30)
+
+numCoinsGreedy = [0] * len(change)
+numCoinsDP = [0] * len(change)
+numCoinsSlow = [0] * len(change)
+
+for i, amt in enumerate(change):
+	_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
+	_, numCoinsDP[i] = changedp(coinArray, amt)
+  _, numCoinsSlow[i] = changeslow(coinArray, amt)
+
+plt.figure(2)
+plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0, label='Greedy')
+plt.plot(change, numCoinsDP, 'r--', linewidth=2.0, label='DP')
+plt.plot(change, numCoinsSlow, 'g-', linewidth=2.0, label='Slow')
+plt.legend(loc='upper left')
+plt.ylabel('# of Coins')
+plt.xlabel('Change Amount')
+plt.grid(True)
+plt.savefig('img/Q3_slow.png', bbox_inches='tight')
 
 ### QUESTION 4 ###
 coinArray1 = [1, 2, 6, 12, 24, 48, 60] 
@@ -47,23 +69,23 @@ for i, amt in enumerate(change):
 	_, numCoinsDP1[i] = changedp(coinArray1, amt)
 	_, numCoinsDP2[i] = changedp(coinArray2, amt)
 
-plt.figure(2)
+plt.figure(3)
 plt.plot(change, numCoinsGreedy1, 'b-', linewidth=2.0, label='Greedy')
 plt.plot(change, numCoinsDP1, 'r--', linewidth=2.0, label='DP')
 plt.legend(loc='upper left')
 plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
 plt.grid(True)
-plt.savefig('Q4a.png', bbox_inches='tight')
+plt.savefig('img/Q4a.png', bbox_inches='tight')
 
-plt.figure(3)
+plt.figure(4)
 plt.plot(change, numCoinsGreedy2, 'b-', linewidth=2.0, label='Greedy')
 plt.plot(change, numCoinsDP2, 'r--', linewidth=2.0, label='DP')
 plt.legend(loc='upper left')
 plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
 plt.grid(True)
-plt.savefig('Q4b.png', bbox_inches='tight')
+plt.savefig('img/Q4b.png', bbox_inches='tight')
 
 ### QUESTION 5 ###
 coinArray = [1] + range(2, 31, 2)
@@ -76,11 +98,34 @@ for i, amt in enumerate(change):
 	_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
 	_, numCoinsDP[i] = changedp(coinArray, amt)
 
-plt.figure(4)
+plt.figure(5)
 plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0, label='Greedy')
 plt.plot(change, numCoinsDP, 'r--', linewidth=2.0, label='DP')
 plt.legend(loc='upper left')
 plt.ylabel('# of Coins')
 plt.xlabel('Change Amount')
 plt.grid(True)
-plt.savefig('Q5.png', bbox_inches='tight')
+plt.savefig('img/Q5.png', bbox_inches='tight')
+
+### QUESTION 5 WITH SLOW ###
+coinArray = [1] + range(2, 31, 2)
+change = range(1, 100)
+
+numCoinsGreedy = [0] * len(change)
+numCoinsDP = [0] * len(change)
+numCoinsSlow = [0] * len(change)
+
+for i, amt in enumerate(change):
+  _, numCoinsGreedy[i] = changegreedy(coinArray, amt)
+  _, numCoinsDP[i] = changedp(coinArray, amt)
+  _, numCoinsSlow[i] = changeslow(coinArray, amt)
+
+plt.figure(6)
+plt.plot(change, numCoinsGreedy, 'b-', linewidth=2.0, label='Greedy')
+plt.plot(change, numCoinsDP, 'r--', linewidth=2.0, label='DP')
+plt.plot(change, numCoinsSlow, 'g--', linewidth=2.0, label='Slow')
+plt.legend(loc='upper left')
+plt.ylabel('# of Coins')
+plt.xlabel('Change Amount')
+plt.grid(True)
+plt.savefig('img/Q5_slow.png', bbox_inches='tight')
