@@ -1,0 +1,48 @@
+    Question 1
+    brute-force/d-and-c
+[X] implement
+[ ] pseudocode
+[ ] asymptotic runtime
+    DP
+[X] implement
+[X] pseudocode
+[X] asymptotic runtime
+    greedy
+[X] implement
+[X] pseudocode
+[X] asymptotic runtime
+
+[X] Question 2
+
+    Question 3
+[ ] Plot
+[ ] How do the approaches compare?
+
+    Question 4
+[ ] Plot
+[ ] How do the approaches compare?
+
+    Question 5
+[ ] Plot
+[ ] How do the approaches compare?
+
+    Question 6
+[ ] Determine Run Times
+[ ] Plot
+[ ] Compare
+
+    Question 7
+[ ] Plot
+[ ] Answer question about influence of size n
+
+[ ] Question 8
+
+[ ] Assemble
+
+    Teach
+[ ] PDF
+[ ] README
+[ ] Code
+
+    Canvas
+[ ] PDF
