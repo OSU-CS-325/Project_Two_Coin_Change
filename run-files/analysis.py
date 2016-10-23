@@ -164,7 +164,7 @@ def Q5():
 ### QUESTION 5 WITH SLOW ###
 def Q5slow():
 	coinArray = [1] + range(2, 31, 2)
-	change = range(1, 100)
+	change = range(1, 30)
 
 	numCoinsGreedy = [0] * len(change)
 	numCoinsDP = [0] * len(change)
