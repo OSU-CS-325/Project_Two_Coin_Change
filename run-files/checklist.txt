@@ -1,8 +1,8 @@
     Question 1
     brute-force/d-and-c
 [X] implement
-[ ] pseudocode
-[ ] asymptotic runtime
+[X] pseudocode
+[X] asymptotic runtime
     DP
 [X] implement
 [X] pseudocode
