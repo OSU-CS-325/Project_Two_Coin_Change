@@ -1,1 +1,23 @@
-DIVIDE_AND_CONQUER
+CHANGE_SLOW(coin_array, change)
+	coin_count = [0,...,coin_array.length - 1] = 0 
+
+        if (change exists in coinArray)
+        	coin_count[index of change] = 1
+        	return coin_count, 1
+        else if (change = 0)
+        	return coin_count, 0
+        	
+       	min_coins = infinity
+       	
+       	for (i = 1 to change/2)
+       		coin_count_left, min_coins_left = CHANGE_SLOW(coin_array, i) 
+       		coin_count_right, min_coins_right = CHANGE_SLOW(coin_array, change - i)
+       		total_coins = min_coins_left + min_coins_right
+       		
+       		if total_coins < min_coins:
+       			min_coins = total_coins
+       			
+       			for (j in coin_count_left/right)
+       				coin_count = coin_count_left[j] + coin_count_right[j]
+
+	return coin_count, min_coins 
