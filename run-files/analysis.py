@@ -104,8 +104,8 @@ numCoinsDP2 = [0] * len(change)
 for i, amt in enumerate(change):
 	_, numCoinsGreedy1[i] = changegreedy(coinArray1, amt)
 	_, numCoinsGreedy2[i] = changegreedy(coinArray2, amt)
-  _, numCoinsSlow1[i] = changeslow(coinArray1, amt)
-  _, numCoinsSlow2[i] = changeslow(coinArray2, amt)
+	_, numCoinsSlow1[i] = changeslow(coinArray1, amt)
+	_, numCoinsSlow2[i] = changeslow(coinArray2, amt)
 	_, numCoinsDP1[i] = changedp(coinArray1, amt)
 	_, numCoinsDP2[i] = changedp(coinArray2, amt)
 
