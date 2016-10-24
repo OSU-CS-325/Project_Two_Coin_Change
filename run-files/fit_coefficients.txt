@@ -1,0 +1,10 @@
+Q3 Greedy Linear Curve Fit: 
+Slope = 3.38241643722e-09
+Intercept = 1.00069699928e-05
+
+
+Q3 DP Linear Curve Fit: 
+Slope = 1.09099061963e-06
+Intercept = -0.000338160287395
+
+
