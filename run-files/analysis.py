@@ -32,7 +32,7 @@ def Q3():
 
 			t0 = time.clock()
 			_, numCoinsDP[i] = changedp(coinArray, amt)
-			runtimeGreedy[i] += time.clock() - t0
+			runtimeDP[i] += time.clock() - t0
 
 		runtimeGreedy[i] /= 10
 		runtimeDP[i] /= 10
