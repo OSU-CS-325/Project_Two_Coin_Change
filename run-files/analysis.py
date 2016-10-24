@@ -96,7 +96,7 @@ def Q3slow():
 	plt.grid(True)
 	plt.savefig('img/Q3_slow.png', bbox_inches='tight')
 
-	plt.figure(20)
+	plt.figure(21)
 	plt.plot(change, runtimeGreedy, 'b-', linewidth=2.0, label='Greedy')
 	plt.plot(change, runtimeDP, 'r--', linewidth=2.0, label='DP')
 	plt.plot(change, runtimeSlow, 'g-.', linewidth=2.0, label='Slow')
