@@ -1,17 +1,34 @@
-Q3 Greedy Linear Curve Fit: 
-Slope = 3.46089048913e-09
-Intercept = 1.05370302993e-05
+Q4a Greedy Linear Curve Fit: 
+Slope = 2.85492709011e-09
+Intercept = 1.61661820002e-05
 
 
-Q3 DP Linear Curve Fit: 
-Slope = 1.1297651112e-06
-Intercept = -0.000907084092912
+Q4a DP Linear Curve Fit: 
+Slope = 1.3769347095e-06
+Intercept = -0.000196530070455
 
 
-Q3 Slow Exponential Curve Fit: 
+Q4a Slow Exponential Curve Fit: 
 y = a*e^(b*x) + c 
-a = 3.72671279992e-07
-b = 0.686908744783
-c = 0.000170823303123
+a = 1.7009982093e-07
+b = 0.695995375511
+c = 8.65447091968e-05
+
+
+Q4b Greedy Linear Curve Fit: 
+Slope = 1.11499610112e-09
+Intercept = 4.7156968721e-06
+
+
+Q4b DP Linear Curve Fit: 
+Slope = 1.11850331587e-06
+Intercept = -0.0004441986791
+
+
+Q4b Slow Exponential Curve Fit: 
+y = a*e^(b*x) + c 
+a = 3.66778239693e-07
+b = 0.683209334326
+c = -4.42836574577e-05
 
 
