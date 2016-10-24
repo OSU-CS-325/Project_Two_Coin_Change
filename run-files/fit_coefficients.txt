@@ -1,10 +1,17 @@
 Q3 Greedy Linear Curve Fit: 
-Slope = 3.38241643722e-09
-Intercept = 1.00069699928e-05
+Slope = 3.46089048913e-09
+Intercept = 1.05370302993e-05
 
 
 Q3 DP Linear Curve Fit: 
-Slope = 1.09099061963e-06
-Intercept = -0.000338160287395
+Slope = 1.1297651112e-06
+Intercept = -0.000907084092912
+
+
+Q3 Slow Exponential Curve Fit: 
+y = a*e^(b*x) + c 
+a = 3.72671279992e-07
+b = 0.686908744783
+c = 0.000170823303123
 
 
