@@ -27,8 +27,8 @@
 [x] How do the approaches compare?
 
     Question 6
-[ ] Determine Run Times
-[ ] Plot
+[x] Determine Run Times
+[x] Plot
 [ ] Compare
 
     Question 7
