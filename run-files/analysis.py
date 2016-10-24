@@ -29,6 +29,7 @@ def Q3():
 			t0 = time.clock()
 			_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
 			runtimeGreedy[i] += time.clock() - t0
+
 			t0 = time.clock()
 			_, numCoinsDP[i] = changedp(coinArray, amt)
 			runtimeGreedy[i] += time.clock() - t0
@@ -50,7 +51,7 @@ def Q3():
 	plt.plot(change, runtimeGreedy, 'b-', linewidth=2.0, label='Greedy')
 	plt.plot(change, runtimeDP, 'r--', linewidth=2.0, label='DP')
 	plt.legend(loc='upper left')
-	plt.title('V =[1, 5, 10, 25, 50]')
+	plt.title('V = [1, 5, 10, 25, 50]')
 	plt.ylabel('Avg. Runtime (sec)')
 	plt.xlabel('Change Amount')
 	plt.grid(True)
@@ -74,9 +75,11 @@ def Q3slow():
 			t0 = time.clock()
 			_, numCoinsGreedy[i] = changegreedy(coinArray, amt)
 			runtimeGreedy[i] += time.clock() - t0
+
 			t0 = time.clock()
 			_, numCoinsDP[i] = changedp(coinArray, amt)
 			runtimeDP[i] += time.clock() - t0
+
 			t0 = time.clock()
 			_, numCoinsSlow[i] = changeslow(coinArray, amt)
 			runtimeSlow[i] += time.clock() - t0
@@ -101,7 +104,7 @@ def Q3slow():
 	plt.plot(change, runtimeDP, 'r--', linewidth=2.0, label='DP')
 	plt.plot(change, runtimeSlow, 'g-.', linewidth=2.0, label='Slow')
 	plt.legend(loc='upper left')
-	plt.title('V =[1, 5, 10, 25, 50]')
+	plt.title('V = [1, 5, 10, 25, 50]')
 	plt.ylabel('Avg. Runtime (sec)')
 	plt.xlabel('Change Amount')
 	plt.grid(True)
@@ -118,11 +121,33 @@ def Q4():
 	numCoinsDP1 = [0] * len(change)
 	numCoinsDP2 = [0] * len(change)
 
+	runtimeGreedy1 = [0] * len(change)
+	runtimeGreedy2 = [0] * len(change)
+	runtimeDP1 = [0] * len(change)
+	runtimeDP2 = [0] * len(change)
+
 	for i, amt in enumerate(change):
-		_, numCoinsGreedy1[i] = changegreedy(coinArray1, amt)
-		_, numCoinsGreedy2[i] = changegreedy(coinArray2, amt)
-		_, numCoinsDP1[i] = changedp(coinArray1, amt)
-		_, numCoinsDP2[i] = changedp(coinArray2, amt)
+		for j in range(10):
+			t0 = time.clock()
+			_, numCoinsGreedy1[i] = changegreedy(coinArray1, amt)
+			runtimeGreedy1[i] += time.clock() - t0
+
+			t0 = time.clock()
+			_, numCoinsGreedy2[i] = changegreedy(coinArray2, amt)
+			runtimeGreedy2[i] += time.clock() - t0
+
+			t0 = time.clock()
+			_, numCoinsDP1[i] = changedp(coinArray1, amt)
+			runtimeDP1[i] += time.clock() - t0
+
+			t0 = time.clock()
+			_, numCoinsDP2[i] = changedp(coinArray2, amt)
+			runtimeDP2[i] += time.clock() - t0
+
+		runtimeGreedy1[i] /= 10
+		runtimeGreedy2[i] /= 10
+		runtimeDP1[i] /= 10
+		runtimeDP2[i] /= 10
 
 	plt.figure(3)
 	plt.plot(change, numCoinsGreedy1, 'b-', linewidth=2.0, label='Greedy')
@@ -143,6 +168,26 @@ def Q4():
 	plt.xlabel('Change Amount')
 	plt.grid(True)
 	plt.savefig('img/Q4b.png', bbox_inches='tight')
+
+	plt.figure(22)
+	plt.plot(change, runtimeGreedy1, 'b-', linewidth=2.0, label='Greedy')
+	plt.plot(change, runtimeDP1, 'r--', linewidth=2.0, label='DP')
+	plt.legend(loc='upper left')
+	plt.title('V = [1, 2, 6, 12, 24, 48, 60]')
+	plt.ylabel('Avg. Runtime (sec)')
+	plt.xlabel('Change Amount')
+	plt.grid(True)
+	plt.savefig('img/Q4a_runtime.png', bbox_inches='tight')
+
+	plt.figure(23)
+	plt.plot(change, runtimeGreedy2, 'b-', linewidth=2.0, label='Greedy')
+	plt.plot(change, runtimeDP2, 'r--', linewidth=2.0, label='DP')
+	plt.legend(loc='upper left')
+	plt.title('V = [1, 6, 13, 37, 150]')
+	plt.ylabel('Avg. Runtime (sec)')
+	plt.xlabel('Change Amount')
+	plt.grid(True)
+	plt.savefig('img/Q4b_runtime.png', bbox_inches='tight')
 
 ### QUESTION 4 WITH SLOW ###
 def Q4slow():
