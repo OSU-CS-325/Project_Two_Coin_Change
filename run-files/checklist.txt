@@ -24,7 +24,7 @@
 
     Question 5
 [x] Plot
-[ ] How do the approaches compare?
+[x] How do the approaches compare?
 
     Question 6
 [ ] Determine Run Times
