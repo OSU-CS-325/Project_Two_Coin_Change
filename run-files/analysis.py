@@ -389,10 +389,10 @@ def Q5slow():
 def main():
 	Q3()
 	Q3slow()
-	# Q4()
-	# Q4slow()
-	# Q5()
-	# Q5slow()
+	Q4()
+	Q4slow()
+	Q5()
+	Q5slow()
 
 
 if __name__ == "__main__":
