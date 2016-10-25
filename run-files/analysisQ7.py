@@ -15,7 +15,7 @@ from changegreedy import changegreedy
 from changedp import changedp
 
 ### QUESTION 7 ###
-def Q7(slow):
+def Q7(slow, minChange, maxChange):
 
 	lenV = []
 	runtimeGreedy = []
@@ -46,7 +46,7 @@ def Q7(slow):
 					randFrom = coinArray[len(coinArray) - 1] + 1
 					randTo = coinArray[len(coinArray) - 1] + 5
 					coinArray.append(random.randint(randFrom, randTo))
-			change = random.randint(1, 30)
+			change = random.randint(minChange, maxChange)
 			#print "  coinArray:", coinArray				
 			#print "  change:", change			
 
@@ -100,7 +100,7 @@ def Q7(slow):
 		
 
 def main():
-	Q7(False)
+	Q7(False, 100, 100)
 	#Q7(True)
 
 
