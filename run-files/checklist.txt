@@ -32,8 +32,8 @@
 [ ] Compare
 
     Question 7
-[ ] Plot
-[ ] Answer question about influence of size n
+[X] Plot
+[X] Answer question about influence of size n
 
 [ ] Question 8
 
