@@ -42,13 +42,15 @@ coinArray = []
 change = []
 with open(inputFileName) as inputFile:
 	for i, line in enumerate(inputFile):
-		# Odd lines define the coin array
-		if (i + 1) % 2:
-			arrayString = line.replace('[','').replace(']\n','').split(',')
-			coinArray.append([int(i) for i in arrayString])
-		# Even lines define the amount of change to make
-		else:
-			change.append(int(line))
+		line = line.rstrip('\r\n')
+		if line:
+			# Odd lines define the coin array
+			if (i + 1) % 2:
+				arrayString = line.replace('[','').replace(']','').split(',')
+				coinArray.append([int(i) for i in arrayString])
+			# Even lines define the amount of change to make
+			else:
+				change.append(int(line))
 
 
 '''
