@@ -23,14 +23,14 @@ def Q7(slow):
 	runtimeSlow = []
 
 	numExp = 10
-	maxRange = 100
+	maxRange = 1000
 	if (slow):
 		maxRange = 10 # some much smaller number
 
 	for i in range(1, maxRange): # V can be of length 1 to (maxRange - 1)
 		print "\n------ running V length=" + str(i) + "------"
 		lenV.append(i)
-		print "lenV:", lenV
+		#print "lenV:", lenV
 		runtimeGreedy.append(0)
 		runtimeDP.append(0)
 		runtimeSlow.append(0)
@@ -47,8 +47,8 @@ def Q7(slow):
 					randTo = coinArray[len(coinArray) - 1] + 5
 					coinArray.append(random.randint(randFrom, randTo))
 			change = random.randint(1, 30)
-			print "  coinArray:", coinArray				
-			print "  change:", change			
+			#print "  coinArray:", coinArray				
+			#print "  change:", change			
 
 			print "  running greedy..."
 			start = datetime.datetime.now()
@@ -90,8 +90,8 @@ def Q7(slow):
 		plt.plot(lenV, runtimeSlow, 'g-.', linewidth=2.0, label='Slow')
 	plt.legend(loc='upper left')
 	plt.title('Runtime vs len(V[]) for randomized V[] and A')
-	plt.ylabel('Avg. Runtime (sec)')
-	plt.xlabel('len(V[]')
+	plt.ylabel('Avg. Runtime (10^-6 sec)')
+	plt.xlabel('len(V[])')
 	plt.grid(True)
 	if (slow):
 		plt.savefig('img/Q7slow_runtime.png', bbox_inches='tight')
