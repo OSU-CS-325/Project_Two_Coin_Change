@@ -5,3 +5,35 @@ Algorithm changeslow:
 4
 [1, 1, 1, 1]
 4
+Change value > 25
+Problem not run due to excessive runtime
+Change value > 25
+Problem not run due to excessive runtime
+
+
+Algorithm changegreedy:
+[0, 0, 2]
+2
+[1, 0, 3, 0]
+4
+[1, 1, 1, 1]
+4
+[2, 1, 0, 2]
+5
+[0, 0, 1, 2]
+3
+
+
+Algorithm changedp:
+[0, 0, 2]
+2
+[1, 0, 3, 0]
+4
+[1, 1, 1, 1]
+4
+[0, 1, 2, 1]
+4
+[0, 0, 1, 2]
+3
+
+
