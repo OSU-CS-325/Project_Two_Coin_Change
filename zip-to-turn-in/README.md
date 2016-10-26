@@ -20,10 +20,10 @@ tar -xvf cs325_Group12_ProjectTwo.tar.bz2
   * ./run-files/runProjectTwo.sh  - Shell script for running the code
 
 * Navigate to the "run-files" directory
-* Type the following command to run the code and produce your own copy of the 'Amountchange.txt': 
+* Type the following command to run the code, replacing 'InputFile.txt' with your desired input file:
 
 ```
-./runProjectTwo.sh
+python ./projectTwo.py InputFile.txt
 ```
 
-* You can then check the results from running the script in the newly created 'Amountchange.txt' in the current directory
+* You can then check the results from running the script in the newly created '[InputFile]change.txt' in the current directory, where 'InputFile' will match your input file name.
