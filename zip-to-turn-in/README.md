@@ -17,7 +17,6 @@ tar -xvf cs325_Group12_ProjectTwo.tar.bz2
   * ./greedy/changegreedy.py  -Contains python code for the 'greedy' algorithm
   * ./dynamic-programming/changedp.py   -Contains python code for the 'dynamic programming' algorithm
   * ./run-files/projectTwo.py   -Contains python code to run inputs through algorithms and Also runs tests and experimental analysis (commented out)
-  * ./run-files/runProjectTwo.sh  - Shell script for running the code
 
 * Navigate to the "run-files" directory
 * Type the following command to run the code, replacing 'InputFile.txt' with your desired input file:
