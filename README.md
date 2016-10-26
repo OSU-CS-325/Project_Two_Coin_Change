@@ -25,3 +25,5 @@ tar -xvf cs325_Group12_ProjectTwo.tar.bz2
 ```
 ./runProjectTwo.sh
 ```
+
+* You can then check the results from running the script in the newly created 'Amountchange.txt' in the current directory
