@@ -81,7 +81,12 @@ for algorithm in range(3):
 
 	for i, _ in enumerate(coinArray):
 		if algorithm == 0:
-			coinCount, totalCoins = changeslow(coinArray[i], change[i])
+			# Prevent user from hanging the script by giving changeslow large values
+			if change[i] <= 25:
+				coinCount, totalCoins = changeslow(coinArray[i], change[i])
+			else:
+				coinCount = "Change value > 25"
+				totalCoins = "Problem not run due to excessive runtime"
 		elif algorithm == 1:
 			coinCount, totalCoins = changegreedy(coinArray[i], change[i])
 		elif algorithm == 2:

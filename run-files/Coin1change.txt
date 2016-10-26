@@ -1,10 +1,10 @@
 Algorithm changeslow:
-0
-0
-0
-0
-0
-0
+Change value >= 25
+Problem not run due to excessive runtime
+Change value >= 25
+Problem not run due to excessive runtime
+Change value >= 25
+Problem not run due to excessive runtime
 
 
 Algorithm changegreedy:

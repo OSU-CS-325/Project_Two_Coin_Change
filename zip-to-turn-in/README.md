@@ -26,3 +26,4 @@ python ./projectTwo.py InputFile.txt
 ```
 
 * You can then check the results from running the script in the newly created '[InputFile]change.txt' in the current directory, where 'InputFile' will match your input file name.
+* NOTE: Change values greater than 25 will not be run due to extremely long run times. A message will be placed in the output file alerting you to this fact.
