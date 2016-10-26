@@ -25,7 +25,7 @@ tar -xvf cs325_Group12_ProjectTwo.tar.bz2
 * Type the following command to run the code and produce your own copy of the 'Amountchange.txt': 
 
 ```
-./runProjectTwo.sh
+python projectTwo.py [Input filename].txt
 ```
 
-* You can then check the results from running the script in the newly created 'Amountchange.txt' in the current directory
+* You can then check the results from running the script in the newly created '[Input filename]change.txt' in the current directory
